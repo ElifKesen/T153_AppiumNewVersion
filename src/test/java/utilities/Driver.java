@@ -18,7 +18,7 @@ public class Driver {
     public static AndroidDriver getAndroidDriver()  {
         URL appiumServerURL = null;
         try {
-            appiumServerURL = new URL("http:127.0.0.1:4723/");
+            appiumServerURL = new URL("http://127.0.0.1:4723/");
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
@@ -29,7 +29,10 @@ public class Driver {
                     .setPlatformName("Android")
                     .setPlatformVersion("10.0")
                     .setAutomationName("UiAutomator2")
-                    .setApp("");
+                   //.setApp("C:\\Users\\elifk\\IdeaProjects\\T153_AppiumNewVersion\\Apps\\Teknosa – Alisveris, Teknoloji_7.3.6_APKPure.apk")
+                    .setAppPackage("com.tmob.teknosa")
+                    .setAppActivity("com.tmob.teknosa.MainActivity")
+                    .setNoReset(false);
 
 
             if (ConfigReader.getProperty("platformName").equals("Android")) {

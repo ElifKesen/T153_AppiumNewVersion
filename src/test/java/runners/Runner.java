@@ -8,9 +8,9 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         plugin = {"pretty",
                 "html:target/cucumber-reports/regression.html"},
-        features = "src/test/resources/Feature",
+        features = "src/test/resources/Features",
         glue = "stepDefinitions",
-        tags = "@apk",
+        tags = "@teknosa",
         dryRun = false
 )
 public class Runner {
