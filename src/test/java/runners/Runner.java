@@ -10,8 +10,8 @@ import org.junit.runner.RunWith;
                 "html:target/cucumber-reports/regression.html"},
         features = "src/test/resources/Features",
         glue = "stepDefinitions",
-        tags = "@teknosa",
-        dryRun = false
+        tags = "@ptt",
+        dryRun = true
 )
 public class Runner {
 }

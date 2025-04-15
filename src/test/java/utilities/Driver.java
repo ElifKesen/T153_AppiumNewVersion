@@ -25,6 +25,7 @@ public class Driver {
 
         if (appiumDriver == null) {
             UiAutomator2Options options=new UiAutomator2Options();
+            /*
             options.setDeviceName("Pixel 4")
                     .setPlatformName("Android")
                     .setPlatformVersion("10.0")
@@ -34,6 +35,17 @@ public class Driver {
                     .setAppPackage("com.tmob.teknosa")
                     .setAppActivity("com.tmob.teknosa.MainActivity")
                     .setNoReset(false);
+
+             */
+            options.setDeviceName("Pixel 4")
+                    .setPlatformName("Android")
+                    .setPlatformVersion("10.0")
+                    .setAutomationName("UiAutomator2")
+                   // .setApp("C:\\Users\\elifk\\IdeaProjects\\T153_AppiumNewVersion\\Apps\\PttAVM - Güvenli Alisveris_2.4.1GMS_APKPure.apk")
+
+                   .setAppPackage("com.pttem.epttavm")
+                   .setAppActivity("com.pttem.epttavm.ui.activities.splash.SplashActivity")
+                   .setNoReset(false);
 
 
             if (ConfigReader.getProperty("platformName").equals("Android")) {
